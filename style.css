@@ -1,0 +1,152 @@
+/* || RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* || VARIABLES */ 
+
+:root {
+    /* COLORS */
+    --LHT-GRAY: #f8f8f8;
+    --LTH-COLOR: #ffffff;
+    --ORG-COLOR: #ff5e00;
+    --BLUE-COLOR: #B6C6FF;
+    --DARK-COLOR: #000;
+}
+
+/* General */
+
+/* Nav Bar */
+
+ .nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--LTH-COLOR);
+    box-shadow: 0px 2px 10px rgba(0,0,0, 0.1);
+    position: fixed;
+    top: 0;
+}
+
+.nav-container .logo {
+    color: #000;
+    text-decoration: none;
+    font-weight: 800;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ .nav-options ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-options ul li {
+    margin-left: 20px;
+    list-style: none;
+    position: relative;
+}
+
+.nav-options ul li .fa {
+    transition: all 0.5s ease;
+}
+
+
+.nav-options ul li .fa {
+    font-weight: 600;
+}
+
+.nav-options ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--BLUE-COLOR);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.nav-options ul li a:hover::before {
+    width: 100%;
+}
+
+.nav-options ul li a:hover, li .fa:hover   {
+    color: var(--BLUE-COLOR);
+    cursor: pointer;
+}
+
+.nav-options ul li a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+.nav-container .bar {
+    display: none;
+}
+
+/* Head Img */
+.headImg {
+    margin-top: 60px;
+    padding: 20px;
+    background: url(../Imgs/showImg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Media Queries */
+
+@media (max-width: 500px) {
+
+    .nav-container .bar {
+        display: block;
+    }
+
+    .nav-container .bar, .fa-times {
+        cursor: pointer;
+    }
+
+    .nav-container .fa-times.show {
+        display: none;
+    }
+
+    .navBar .nav-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-options #ul {
+        position: absolute;
+        top: 43px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-flow: column;
+        background: var(--LTH-COLOR);
+        box-shadow: 4px 0px 10px rgba(0,0,0, 0.1);
+        z-index: 0;
+        padding-bottom: 15px;
+        transition: all 1s ease-in-out;
+    }
+
+    .nav-options #ul.nav-collapse {
+        display: none;
+        top: 0;
+    }
+
+    .nav-options #ul li {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="css/css/all.css">
+
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+</head>
+<body>
+
+    <!--Style-->
+
+    <style>
+        
+        /* || VARIABLES */ 
+
+        :root {
+            /* COLORS */
+            --LHT-GRAY: #d3d3d3;
+            --LTH-COLOR: #ffffff;
+            --ORG-COLOR: #5d00ba;
+            --DARK-COLOR: #000;
+        }
+
+        /* single product */
+
+        #single-product {
+            display: flex;
+            justify-content: center;
+            flex-flow: row;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .single-product-row {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .single-product-row img {
+            width: 100%;
+        }
+
+        .single-product-row .small-img-group {
+            /* position: absolute;
+            bottom: 0px;  
+            left: -20px; */
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+        }
+
+        .small-img-group .small-img-con img {
+            width: 100%;
+            cursor: pointer;
+            transition: all 1s ease-in-out;
+        }
+
+        /* single-product-details */
+
+        .single-product-details {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left: 15px;
+        }
+
+        .single-product-details h6 {
+            margin-bottom: 20px;
+            color: var(--LHT-GRAY);
+            font-weight: 200;
+        }
+
+        .single-product-details h3 {
+            margin-bottom: 20px;
+            font-weight: 200;
+        }
+
+        .single-product-details h2 {
+            margin-bottom: 10px;
+            font-weight: 200;
+        }
+
+        .single-product-details input {
+            width: 50px;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        .single-product-details .buy-btn {
+            width: 100px;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: var(--ORG-COLOR);
+            color: var(--LTH-COLOR);
+            cursor: pointer;
+            transition: all 1s ease-in-out;
+        }
+
+        .single-product-details .input {
+            margin-bottom: 20px;
+        }
+
+        .single-product-details .buy-btn:hover {
+            background-color: var(--LTH-COLOR);
+            color: var(--ORG-COLOR);
+            border: 1px solid var(--ORG-COLOR);
+        }
+
+        .single-product-details h4 {
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        /* footer */
+
+        footer {
+            margin-top: 50px;
+        }
+
+        @media (max-width: 500px) {
+             /* single product */ 
+
+            #single-product {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: column;
+                width: 100%;
+                margin-top: 50px;
+            }
+
+            .single-product-row {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                position: relative;
+                margin-bottom: 10px;
+            }
+
+            .single-product-details {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin-left: 15px;
+            }
+        } 
+
+    </style>
+    
+    <!---Nav Bar-->
+    <nav class="navBar">
+        <div class="container-fluid nav-container">
+            <a class="logo" href="#">
+                <img src="./Assets/Imgs/logo.png" alt="" width="50px" height="50px">
+                <p>JOAM<span>Collection</span></p>
+            </a>
+
+            <div class="nav-options">
+                <ul id="ul" class="nav-collapse">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li>
+                        <i onclick="window.location.href='cart.html'
+                        " class="fa fa-shopping-cart"></i>
+                        <i onclick="window.location.href='account.html'
+                        " class="fa fa-user"></i>  
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bar">
+                <i class="fa fa-bars"></i>
+                <i class="show fa fa-times"></i>
+            </div>
+ 
+        </div>
+    </nav>
+
+    <!--Single Product-->
+
+    <section id="single-product">
+        <div class="single-product-row">
+            <img src="./Assets/Imgs/trouser3.jpg" id="main-img">
+            <div class="small-img-group">
+                <!-- <div class="small-img">
+                    <img src="./Assets/Imgs/Tshirt5.jpg">
+                </div> -->
+                <div class="small-img-con">
+                    <img src="./Assets/Imgs/trouser3.jpg" class="small-img">
+                </div>
+                <div class="small-img-con">
+                    <img src="./Assets/Imgs/trouser1.jpg" class="small-img">
+                </div>
+                <div class="small-img-con">
+                    <img src="./Assets/Imgs/trouser2.jpg" class="small-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="single-product-details">
+            <h6>Men Tshirt</h6>
+            <h3>Men's Fashion</h3>
+            <h2>$100</h2>
+            <div class="input">
+                <input type="number" value="1">
+            <button class="buy-btn">Add to Cart</button>
+            </div>
+            <h4>Product details</h4>
+            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis blanditiis at consequuntur? Officiis mollitia vel cum deserunt sapiente corporis in.</span>
+        </div>
+    </section>
+
+    <!--Related productcs-->
+
+    <section id="featured">
+        <div class="featured-heading">
+            <h4>Related Products</h4>
+            <hr>
+            <h6>Check out relate products</h6>
+        </div>
+
+        <div class="featured-products">
+            <div class="featured-row">
+                <img src="./Assets/Imgs/shirt8.jpg">
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+    
+                <h5 class="p-name">Office Shirts</h5>
+                <h4 class="p-price">$199.8</h4>
+                <button class="buy-btn">Shop Now</button>
+            </div>
+    
+            <div class="featured-row">
+                <img src="./Assets/Imgs/shirt5.jpg">
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+    
+                <h5 class="p-name">Office Shirts</h5>
+                <h4 class="p-price">$199.8</h4>
+                <button class="buy-btn">Shop Now</button>
+            </div>
+    
+            <div class="featured-row">
+                <img src="./Assets/Imgs/shirt5.jpg">
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+    
+                <h5 class="p-name">Office Shirts</h5>
+                <h4 class="p-price">$199.8</h4>
+                <button class="buy-btn">Shop Now</button>
+            </div>
+        </div>
+    </section>
+    
+    <!--Footer-->
+
+    <footer>
+        <div class="footer-row">
+            <div class="footer-one">
+                <img src="./Assets/Imgs/logo.jpg" >
+                <p>We provide the best products for the most affordable prices.</p>
+            </div>
+
+            <div class="footer-one features">
+                <h5>Features</h5>
+                <ul>
+                    <li><a href="#">men</a></li>
+                    <li><a href="#">women</a></li>
+                    <li><a href="#">new arrivals</a></li>
+                    <li><a href="#">ankara</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-one contact">
+                <h5>Contact Us</h5>
+                <div class="contact-details">
+                    <h6>Address</h6>
+                    <p>123 Sacotec Omu, Ijobe Ode, Ogun</p>
+                </div>
+
+                <div class="contact-details">
+                    <h6>Phone</h6>
+                    <p>+234 123 567 2345</p>
+                </div>
+
+                <div class="contact-details">
+                    <h6>Email</h6>
+                    <p>coding@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="footer-one">
+                <h5>Send Us a mail</h5>
+                <div class="mail">
+                    <input type="text" placeholder="type here...">
+                    <button class="mail-btn">
+                        send
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-row">
+            <div class="payment-img">
+                <img src="Assets/Imgs/payImg.jpg">
+            </div>
+
+            <div class="copyright-text">
+                <p>JOAM Collection &copy; 2025 All Right Reserved</p>
+            </div>
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!--JavaScript Codes-->
+
+    <script>
+
+        const barEl = document.querySelector(".fa-bars")
+
+        const cancelEl = document.querySelector(".fa-times")
+
+        const navOptions = document.getElementById("ul");
+
+        const mainImg = document.getElementById("main-img");
+
+        const smallImg = document.getElementsByClassName("small-img");
+
+        console.log(mainImg);
+
+        for (let i = 0; i < 3; i++) {
+            // smallImg[i].onclick = ()=> {
+            //     mainImg.src = smallImg[i].src;
+            //     console.log("yes");
+            // }
+
+            smallImg[i].addEventListener("click", ()=> {
+                mainImg.src = smallImg[i].src;
+               console.log("yes");
+            })
+            
+        }
+        
+
+        barEl.addEventListener("click", ()=> {
+            navOptions.classList.toggle("nav-collapse");
+            console.log(navOptions);
+
+            cancelEl.style.display = "block";
+            barEl.style.display = "none";
+        })
+
+        cancelEl.addEventListener("click", ()=> {
+            navOptions.classList.toggle("nav-collapse");
+
+            barEl.style.display = "block";
+            cancelEl.style.display = "none";
+        })
+
+    </script>
+</body>
+</html>

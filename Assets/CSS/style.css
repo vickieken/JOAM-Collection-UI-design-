@@ -74,6 +74,7 @@ nav {
     margin-left: 20px;
     list-style: none;
     position: relative;
+    font-size: 12px;
 }
 
 .nav-options ul li .fa {
@@ -859,8 +860,8 @@ nav {
     } 
 }
 
-@media (max-width: 500px) {
-    
+@media (max-width: 650px) {
+     
     /* Nav Bar */
 
     .nav-container .bar {
@@ -911,6 +912,9 @@ nav {
     .nav-options #ul li {
         margin-top: 36px;
     }
+}
+
+@media (max-width: 500px) {
 
     /* Head Img */
     .headImgs {

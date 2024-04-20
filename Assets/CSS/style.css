@@ -14,12 +14,23 @@
     --LTH-COLOR: #ffffff;
     --ORG-COLOR: #5d00ba;
     --DARK-COLOR: #000;
+    --BTN-COLOR: #5d00ba;
+    --BODY_BG: #f3e4ff;
+
 }
 
 /* General */
 
 body {
     font-family: sans-serif;
+    background-color: var(--BODY_BG);
+}
+
+body.dark {
+    --LTH-COLOR: #242522;
+    --DARK-COLOR: #ffff;
+    --ORG-COLOR: #ff4800;
+    --BODY_BG: #59534e;
 }
 
 .container {
@@ -39,12 +50,62 @@ nav {
     align-items: center;
     padding: 10px;
     background-color: var(--LTH-COLOR);
+    transition: all 0.5s ease-in-out;
     box-shadow: 0px 2px 10px rgba(0,0,0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1;
+    }
+
+    .fa-shopping-cart {
+        color: var(--DARK-COLOR);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .fa-user {
+        color: var(--DARK-COLOR);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .navBar .mode-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .dark-light {
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 100%;
+        height: 20px;
+        border-radius: 15px;
+        display: flex; 
+        align-items: center;
+    }
+
+    .navBar .mode-bar .dark-light i  {
+        color: var(--DARK-COLOR);
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        font-size: 14px;
+    }
+
+    .dark-light i.sun  {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .dark-light.active i.sun  {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .dark-light.active i.moon  {
+        opacity: 0;
+        pointer-events: none;
     }
 
     .nav-container p {
@@ -55,6 +116,7 @@ nav {
     .nav-container p span {
         font-size: 10px;
         color: var(--DARK-COLOR);
+        transition: all 0.5s ease-in-out;
     }
 
 .nav-container .logo {
@@ -62,6 +124,7 @@ nav {
     text-decoration: none;
     font-weight: 800;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.5s ease-in-out;
 }
 
  .nav-options ul {
@@ -115,6 +178,8 @@ nav {
 
 .nav-container .bar {
     display: none;
+    color: var(--DARK-COLOR);
+    transition: all 0.5s ease-in-out;
 }
 
 .nav-container a {
@@ -185,6 +250,8 @@ nav {
         max-width: 60%;
         margin-bottom: 15px;
         font-size: 16px;
+        color: var(--DARK-COLOR);
+        transition: all 1s ease-in-out;
     }
     
     .headImgs h1 {
@@ -192,6 +259,7 @@ nav {
         letter-spacing: -1px;
         line-height: 1;
         margin-bottom: 15px;
+        color: var(--DARK-COLOR);
     }
     
     .headImgs h1 span {
@@ -213,6 +281,7 @@ nav {
     .headImgs .btn:hover {
         color: var(--LTH-COLOR);
         background-color: var(--ORG-COLOR);
+        transition: all 1s ease-in-out;
     }
 
 
@@ -256,6 +325,7 @@ nav {
         font-weight: lighter;
         max-width: 60%;
         font-size: 16px;
+        color: var(--DARK-COLOR);
     }
     
     .showImg h1 {
@@ -263,6 +333,7 @@ nav {
         letter-spacing: -1px;
         line-height: 1;
         margin-bottom: 8px;
+        color: var(--DARK-COLOR);
     }
     
     .showImg h1 span {
@@ -276,7 +347,7 @@ nav {
         padding: 7px;
         border: none;
         color: var(--LTH-COLOR);
-        background-color: var(--DARK-COLOR);
+        background-color: var(--ORG-COLOR);
         cursor: pointer;
         transition: all 1s ease-in-out;
         margin-top: 10px;
@@ -284,7 +355,7 @@ nav {
     
     .showImg .btn:hover {
         color: var(--LTH-COLOR);
-        background-color: var(--ORG-COLOR);
+        background-color: var(--DARK-COLOR);
     }
 
     /* Products Available */
@@ -316,6 +387,7 @@ nav {
         height: 5px;
         border: none;
         border-radius: 10px;
+        transition: all 1s ease-in-out;
     }
 
     .product-container .products {
@@ -378,10 +450,10 @@ nav {
         font-weight: lighter;
         padding: 7px;
         border: none;
-        color: var(--LTH-COLOR);
+        /* color: var(--LTH-COLOR); */
         background-color: var(--DARK-COLOR);
         cursor: pointer;
-        transition: all 1s ease-in-out;
+        transition: all 0.5s ease-in-out;
     }
     
     .product-container .products .details .btn:hover {
@@ -411,6 +483,21 @@ nav {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
+    .featured-heading h4, h6 {
+        color: var(--DARK-COLOR);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .clothes-heading h4, h6 {
+        color: var(--DARK-COLOR);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .trousers-heading h4, h6 {
+        color: var(--DARK-COLOR);
+        transition: all 0.5s ease-in-out;
+    }
+
     .featured-products {
         display: flex;
         flex-flow: row wrap;
@@ -437,15 +524,24 @@ nav {
         color: gold;
     } 
 
-    .featured-products .featured-row .p-name {
-        font-size: 12px;
+    .stars {
+        margin-bottom: 8px;
+    }
+
+     .p-name {
+        font-size: 10px;
         margin-bottom: 5px;
+        color: var(--DARK-COLOR);
+        font-weight: 300;
+        transition: all 0.5s ease-in-out;
     } 
 
-    .featured-products .featured-row .p-price {
-        font-size: 12px;
-        font-weight: 600;
+    .p-price {
+        font-weight: lighter;
+        font-size: 10px;
         margin-bottom: 5px;
+        color: var(--DARK-COLOR);
+        transition: all 0.5s ease-in-out;
     } 
 
     .featured-products .featured-row .buy-btn {
@@ -454,8 +550,8 @@ nav {
         font-weight: lighter;
         padding: 7px;
         border: none;
-        color: var(--LTH-COLOR);
-        background-color: var(--DARK-COLOR);
+        color: var(--DARK-COLOR);
+        background-color: var(--LTH-COLOR);
         cursor: pointer;
         margin: auto;
         transition: all .4s ease-in;
@@ -631,23 +727,27 @@ nav {
         left: 50%;
         transform: translate(-50%, -50%);
         opacity: 0;
+        transition: all 0.5s ease-in-out;
     } 
 
     .trousers-products .trousers-row:hover .buy-btn {
         background-color: var(--ORG-COLOR);
         opacity: 1;
         bottom: -15%;
+        transition: all 0.5s ease-in-out;
     }
 
     /* footer */
 
     footer {
         margin-top: 50px;
-        background: var(--DARK-COLOR);
-        color: var(--LTH-COLOR);
+        background: var(--LTH-COLOR);
+        color: var(--DARK-COLOR);
+        box-shadow: 10px -10px 10px rgba(0,0,0, 0.1);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 12px;
         padding: 25px;
+        transition: all 0.5s ease-in-out;
     }
 
     .footer-row {
@@ -685,12 +785,12 @@ nav {
 
     .footer-row .features li a {
         text-decoration: none;
-        color: var(--LTH-COLOR);
+        color: var(--DARK-COLOR);
         transition: all 1s ease-in-out;
     }
 
     .footer-row .features li a:hover {
-        color: #ff9a60;
+        color: var(--DARK-COLOR);
     }
 
     .footer-row .contact-details {
@@ -716,7 +816,7 @@ nav {
         width: 40%;
         border: 0;
         background: var(--ORG-COLOR);
-        color: var(--LTH-COLOR);
+        color: white;
         padding: 5px;
         cursor: pointer;
         transition: all 1s ease-in-out;
@@ -724,8 +824,8 @@ nav {
     }
 
     .footer-row .footer-one .mail-btn:hover {
-        background: var(--LTH-COLOR);
-        color: var(--ORG-COLOR);
+        background: var(--DARK-COLOR);
+        color: var(--LTH-COLOR);
     }
 
     footer .copyright-row {
@@ -742,9 +842,9 @@ nav {
     }
 
     footer .copyright-row .socials .fab {
-        color: var(--DARK-COLOR);
+        color: var(--LTH-COLOR);
         margin-left: 10px;
-        background: var(--LTH-COLOR);
+        background: var(--DARK-COLOR);
         padding: 10px;
         border-radius: 50%;
         transition: all 1s ease-in-out;
@@ -890,27 +990,28 @@ nav {
     .nav-options #ul {
         position: absolute;
         top: 50px;
-        left: 0;
-        width: 100%;
-        height: 50vh;
+        right: 0;
+        width: 50%;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: flex-start;
         flex-flow: column;
         background: var(--LTH-COLOR);
+        transition: all 1s ease-in-out;
         z-index: 0;
         padding-bottom: 15px;
-        transition: all 1s ease-in-out;
     }
 
     .nav-options #ul.nav-collapse {
-        display: none;
-        top: 0;
-        transition: all 1s ease-in;
+        /* display: none; */
+        top: 50px;
+        right: -350px;
+        transition: all 1s ease-in-out;
     }
 
     .nav-options #ul li {
-        margin-top: 36px;
+        margin-top: 56px;
     }
 }
 

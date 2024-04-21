@@ -76,6 +76,17 @@
         #login-form .form-group label {
             margin-top: 10px;
             font-size: 13px;
+            color: var(--DARK-COLOR);
+        }
+
+        #login-form .form-group input {
+            border: 1px solid var(--ORG-COLOR);
+            transition: all .5s ease-in-out;
+        }
+
+        h2 {
+            color: var(--DARK-COLOR);
+            transition: all .5s ease-in-out;
         }
 
         #login-form .form-group .form-control, .btn {
@@ -87,7 +98,7 @@
 
         #login-form .form-group #login-btn {
             border: none;
-            color: var(--LTH-COLOR);
+            color: white;
             background-color: var(--ORG-COLOR);
             transition: all 1s ease-in-out;
             cursor: pointer;
@@ -111,10 +122,14 @@
             color: red;
         }
 
+        .features ul {
+            color: var(--DARK-COLOR);
+        }
+
         footer {
         margin-top: 200px;
-        background: var(--DARK-COLOR);
-        color: var(--LTH-COLOR);
+        background: var(--LTH-COLOR);
+        color: var(--DARK-COLOR);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 12px;
         padding: 25px;
@@ -133,7 +148,7 @@
 
 
     </style>
-    
+      
     <!---Nav Bar-->
     <nav class="navBar">
         <div class="container-fluid nav-container">
@@ -145,8 +160,10 @@
             <div class="nav-options">
                 <ul id="ul" class="nav-collapse">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">About</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                     <li>
                         <i onclick="window.location.href='cart.html'
@@ -157,9 +174,16 @@
                 </ul>
             </div>
 
-            <div class="bar">
-                <i class="fa fa-bars"></i>
-                <i class="show fa fa-times"></i>
+            <div class="mode-bar">
+                <div class="dark-light">
+                    <i class="fa fa-moon moon"></i>
+                    <i class="fa fa-sun sun"></i>
+                </div>
+    
+                <div class="bar">
+                    <i class="fa fa-bars"></i>
+                    <i class="show fa fa-times"></i>
+                </div>
             </div>
  
         </div>
@@ -196,7 +220,7 @@
         </div>
     </section>
 
-    
+  
     <!--Footer-->
 
     <footer>
@@ -209,10 +233,10 @@
             <div class="footer-one features">
                 <h5>Features</h5>
                 <ul>
-                    <li><a href="#">men</a></li>
-                    <li><a href="#">women</a></li>
+                    <li><a href="shop.html">men</a></li>
+                    <li><a href="femaleShop.html">women</a></li>
                     <li><a href="#">new arrivals</a></li>
-                    <li><a href="#">ankara</a></li>
+                    <li><a href="trouserShop.html">Trousers</a></li>
                 </ul>
             </div>
 
@@ -225,7 +249,7 @@
 
                 <div class="contact-details">
                     <h6>Phone</h6>
-                    <p>+234 123 567 2345</p>
+                    <a href="tel: +234-123-567-2345"><p>+234 123 567 2345</p></a>
                 </div>
 
                 <div class="contact-details">
@@ -266,6 +290,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./Assets/JS/index.js"></script>
 
     <!--Script Code-->
 

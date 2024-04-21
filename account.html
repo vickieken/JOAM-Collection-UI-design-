@@ -219,7 +219,7 @@
         .cart th {
             text-align: left;
             padding: 5px 10px;
-            color: var(--LTH-COLOR);
+            color: var(--DARK-COLOR);
             background: var(--ORG-COLOR);
         }
 
@@ -259,6 +259,16 @@
         #cart .featured-heading hr {
             height: 3px;
             width: 30px;
+        }
+
+        h2, p, span, small {
+            color: var(--DARK-COLOR);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .logo p {
+            color: var(--ORG-COLOR);
+            transition: all .5s ease-in-out;
         }
 
         @media (max-width: 650px) {
@@ -313,7 +323,7 @@
 
 
     </style>
-    
+     
     <!---Nav Bar-->
     <nav class="navBar">
         <div class="container-fluid nav-container">
@@ -325,9 +335,11 @@
             <div class="nav-options">
                 <ul id="ul" class="nav-collapse">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                     <li>
                         <i onclick="window.location.href='cart.html'
                         " class="fa fa-shopping-cart"></i>
@@ -337,9 +349,16 @@
                 </ul>
             </div>
 
-            <div class="bar">
-                <i class="fa fa-bars"></i>
-                <i class="show fa fa-times"></i>
+            <div class="mode-bar">
+                <div class="dark-light">
+                    <i class="fa fa-moon moon"></i>
+                    <i class="fa fa-sun sun"></i>
+                </div>
+    
+                <div class="bar">
+                    <i class="fa fa-bars"></i>
+                    <i class="show fa fa-times"></i>
+                </div>
             </div>
  
         </div>
@@ -376,6 +395,7 @@
 
 
         <!--login-->
+
         <section id="login-container">
             <div class="contanier">
                 <h2>Change Password</h2>
@@ -392,7 +412,7 @@
 
                     <div class="form-group">
                         <label for="password">Confirm Passowrd</label>
-                        <input type="text" name="password" id="login-password" class="form-control" placeholder="confir, password">
+                        <input type="text" name="password" id="login-password" class="form-control" placeholder="confirm password">
                     </div>
 
                     <div class="form-group">
@@ -548,6 +568,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./Assets/JS/index.js"></script>
 
     <!--Script Code-->
 

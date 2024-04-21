@@ -95,11 +95,17 @@
         #account-info .account-details p label {
             font-size: 13px;
             margin-bottom: 2px;
+            color: var(--DARK-COLOR);
+            transition: all 0.5s ease-in-out;
         }
 
         #account-info .account-details p input {
             width: 100%;
             padding: 3px;
+            border: 1px solid var(--ORG-COLOR);
+            transition: all 0.5s ease-in-out;
+            padding: 5px;
+            border-radius: 5px;
         }
 
         #account-info .account-details p {
@@ -115,11 +121,18 @@
         #account-info .checkout-details p label {
             font-size: 13px;
             margin-bottom: 2px;
+            color: var(--DARK-COLOR);
+            transition: all 0.5s ease-in-out;
         }
 
         #account-info .checkout-details p input {
             width: 100%;
             padding: 3px;
+            border: 1px solid var(--ORG-COLOR);
+            color: var(--DARK-COLOR);
+            transition: all 0.5s ease-in-out;
+            padding: 5px;
+            border-radius: 5px;
         }
 
         .checkout-btn {
@@ -138,7 +151,7 @@
             padding: 5px 10px;
             border: none;
             background-color: var(--ORG-COLOR);
-            color: var(--LTH-COLOR);
+            color: white;
             transition: all 1s ease-in-out;
             cursor: pointer;
         }
@@ -191,7 +204,7 @@
 
 
     </style>
-    
+      
     <!---Nav Bar-->
     <nav class="navBar">
         <div class="container-fluid nav-container">
@@ -203,9 +216,11 @@
             <div class="nav-options">
                 <ul id="ul" class="nav-collapse">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                     <li>
                         <i onclick="window.location.href='cart.html'
                         " class="fa fa-shopping-cart"></i>
@@ -215,9 +230,16 @@
                 </ul>
             </div>
 
-            <div class="bar">
-                <i class="fa fa-bars"></i>
-                <i class="show fa fa-times"></i>
+            <div class="mode-bar">
+                <div class="dark-light">
+                    <i class="fa fa-moon moon"></i>
+                    <i class="fa fa-sun sun"></i>
+                </div>
+    
+                <div class="bar">
+                    <i class="fa fa-bars"></i>
+                    <i class="show fa fa-times"></i>
+                </div>
             </div>
  
         </div>
@@ -339,6 +361,8 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="./Assets/JS/index.js"></script>
 
     <!--Script Code-->
 

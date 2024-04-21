@@ -40,6 +40,11 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        .cart table span, small, p {
+            color: var(--DARK-COLOR);
+            transition: all 0.5s ease-in-out;
+        }
+
         .cart table th {
             padding-right: 10px;
             font-size: 13px;
@@ -64,12 +69,17 @@
 
         .cart input {
             width: 30px;
+            border: 1px solid var(--ORG-COLOR);
+            transition: all 0.5s ease-in-out;
+            border-radius: 5px;
+            padding: 2px;
         }
 
         .cart .edit-btn {
             color: var(--ORG-COLOR);
             text-decoration: none;
             font-size: 14px;
+            transition: all 0.5s ease-in-out;
         }
 
         .cart .product-info {
@@ -81,6 +91,7 @@
             color: var(--ORG-COLOR);
             text-decoration: none;
             font-size: 12px;
+            transition: all 0.5s ease-in-out;
         }
 
         .cart .product-info .details p {
@@ -96,8 +107,9 @@
         .cart th {
             text-align: left;
             padding: 5px 10px;
-            color: var(--LTH-COLOR);
+            color: var(--DARK-COLOR);
             background: var(--ORG-COLOR);
+            transition: all 0.5s ease-in-out;
         }
 
         .cart-total {
@@ -123,6 +135,10 @@
             font-size: 14px;
         }
 
+        .logo p {
+            color: var(--ORG-COLOR);
+        }
+
         /* Checkout */
 
         .checkout {
@@ -139,6 +155,7 @@
             font-size: 12px;
             transition: all 1s ease-in-out;
             cursor: pointer;
+            transition: all 0.5s ease-in-out;
         }
 
         .checkout .checkout-btn:hover {
@@ -166,7 +183,7 @@
     }
 
     </style>
-    
+      
     <!---Nav Bar-->
     <nav class="navBar">
         <div class="container-fluid nav-container">
@@ -178,9 +195,11 @@
             <div class="nav-options">
                 <ul id="ul" class="nav-collapse">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                     <li>
                         <i onclick="window.location.href='cart.html'
                         " class="fa fa-shopping-cart"></i>
@@ -190,9 +209,16 @@
                 </ul>
             </div>
 
-            <div class="bar">
-                <i class="fa fa-bars"></i>
-                <i class="show fa fa-times"></i>
+            <div class="mode-bar">
+                <div class="dark-light">
+                    <i class="fa fa-moon moon"></i>
+                    <i class="fa fa-sun sun"></i>
+                </div>
+    
+                <div class="bar">
+                    <i class="fa fa-bars"></i>
+                    <i class="show fa fa-times"></i>
+                </div>
             </div>
  
         </div>
@@ -298,13 +324,13 @@
                 <table>
                     <hr>
                     <tr>
-                        <td>Subtotal</td>
-                        <td>$1200</td>
+                        <td><span>Subtotal</span></td>
+                        <td><span>$1200</span></td>
                     </tr>
 
                     <tr>
-                        <td>Total</td>
-                        <td>$1200</td>
+                        <td><span>Total</span></td>
+                        <td><span>$1200</span></td>
                     </tr>
                 </table>
             </div>
@@ -384,6 +410,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./Assets/JS/index.js"></script>
 
     <!--Script Code-->
 

@@ -22,7 +22,17 @@ console.log(modeToggle);
 
 // setInterval(nextSlide, 5000);
 
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+// set initial dark mode state
+if(isDarkMode) {
+    body.classList.add('dark');
+}
+
 modeToggle.addEventListener("click", ()=> {
     modeToggle.classList.toggle("active");
     body.classList.toggle("dark");
-})
+    const isDarkModeEnabled = body.classList.contains('dark')
+    localStorage.setItem('darkMode', isDarkModeEnabled);
+    
+});

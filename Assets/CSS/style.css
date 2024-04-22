@@ -59,6 +59,50 @@ nav {
     z-index: 1;
     }
 
+    .category-btn {
+        position: relative;
+        cursor: pointer;
+        color: var(--DARK-COLOR);
+    }
+
+    .category {
+        position: absolute;
+        top: 0px;
+        left: -50%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--LTH-COLOR);
+        padding-left: 0px; 
+        padding-right: 20px;
+        padding-bottom: 10px;
+        opacity: 0;
+        transition: all 1s ease-in-out;
+    }
+
+     .category.show {
+        opacity: 1;
+        top: 45px;
+    }
+    
+    .fa-caret-down {
+        transition: all 1s ease-in-out;
+    }
+    
+    .fa-caret-down.rotate {
+        transform: rotatex(180deg);
+        transition: all 1s ease-in-out;
+    }
+
+
+    .category li {
+        white-space: nowrap;
+        margin-bottom: 10px;
+        text-align: center;
+        color: var(--DARK-COLOR);
+    }
+
     .fa-shopping-cart {
         color: var(--DARK-COLOR);
         transition: all 0.5s ease-in-out;
@@ -965,9 +1009,54 @@ nav {
     } 
 }
 
-@media (max-width: 650px) {
+@media (max-width: 670px) {
      
-    /* Nav Bar */
+    /* Nav Bar */.category-btn {
+        position: relative;
+        cursor: pointer;
+        color: var(--DARK-COLOR);
+    }
+
+    .category {
+        position: absolute;
+        top: 0px;
+        left: -50%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--LTH-COLOR);
+        padding-left: 0px; 
+        padding-right: 20px;
+        padding-bottom: 0px;
+        opacity: 0;
+        z-index: 1;
+        transition: all 1s ease-in-out;
+    }
+
+     .category.show {
+        opacity: 1;
+        top: 15px;
+    }
+    
+    .fa-caret-down {
+        transition: all 1s ease-in-out;
+    }
+    
+    .fa-caret-down.rotate {
+        transform: rotatex(180deg);
+        transition: all 1s ease-in-out;
+    }
+
+
+    .category li {
+        white-space: nowrap;
+        margin-bottom: 0;
+        text-align: center;
+        color: var(--DARK-COLOR);
+    }
+
+
 
     .nav-container .bar {
         display: block;

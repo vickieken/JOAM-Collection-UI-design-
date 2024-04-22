@@ -10,6 +10,10 @@ const body = document.querySelector("body");
 const nav = document.querySelector("nav");
 const modeToggle = document.querySelector(".dark-light");
 
+const categoryBtn = document.querySelector(".category-btn");
+const category = document.querySelector(".category");
+const caretDownEl = document.querySelector(".fa-caret-down");
+
 console.log(modeToggle);
 
 // function nextSlide() {
@@ -35,4 +39,10 @@ modeToggle.addEventListener("click", ()=> {
     const isDarkModeEnabled = body.classList.contains('dark')
     localStorage.setItem('darkMode', isDarkModeEnabled);
     
+});
+
+// category button
+categoryBtn.addEventListener("click", ()=> {
+    category.classList.toggle("show");
+    caretDownEl.classList.toggle("rotate");
 });
